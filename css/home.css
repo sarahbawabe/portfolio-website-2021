@@ -49,6 +49,20 @@
   width: min-content;
 }
 
+.big-text.name-text {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute;
+  top: 20%; */
+  text-align: left;
+  /* background-color: white; */
+  /* color: #1969A4; */
+  width: max-content;
+  padding: 0px 20px;
+  margin: 20px 0px;
+  margin-top: 10%;
+}
+
 .blurb {
   right: 0;
   display: flex;
@@ -90,17 +104,39 @@
 @keyframes animateright{from{right:-100vw;opacity:0} to{right:0; opacity:0.85}}
 @keyframes animateleft{from{left:-100vw;opacity:0} to{left:0; opacity:0.85}}
 
+@media only screen and (max-width: 1200px) {
+  .big-text.name-text {
+    width: min-content;
+  }
+}
+
 @media only screen and (max-width: 950px) {
   .big-text {
     font-size: 80px;
   }
 }
-@media only screen and (max-width: 650px) {
+
+@media only screen and (max-width: 770px) {
+  .big-text.name-text {
+    margin-top: 20px;
+    width: max-content;
+  }
+
+}
+
+
+@media only screen and (max-width: 590px) {
 
   #outer-box {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    min-height: 50vh;
+  }
+
+  .big-text.name-text {
+    align-self: flex-start;
+
   }
 
   .blurb {
@@ -116,6 +152,7 @@
     bottom: unset;
     right: unset;
     width: 85%;
+    margin-top: 20px;
     /* align-items: center; */
   }
 
